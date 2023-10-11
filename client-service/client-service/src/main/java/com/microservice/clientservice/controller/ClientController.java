@@ -3,9 +3,11 @@ package com.microservice.clientservice.controller;
 
 import com.microservice.clientservice.model.Client;
 import com.microservice.clientservice.services.ClientService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "http://localhost:4200/")
 @RestController
 @RequestMapping("/clt")
 public class ClientController {
@@ -29,6 +31,12 @@ public class ClientController {
   @GetMapping("getClientByName/{name}")
   public Client getClientByName(@PathVariable String name){
     return clientService.getClientByName(name);
+  }
+
+  // get all clients
+  @GetMapping("/getAllClient")
+  public List<Client> getAllClient() {
+    return clientService.findAll();
   }
 
   // update client
