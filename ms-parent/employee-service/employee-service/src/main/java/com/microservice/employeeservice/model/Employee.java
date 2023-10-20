@@ -22,7 +22,7 @@ public class Employee {
   private String name;
   private long national_identity;
   private Date birthdate;
-  private String job_position;
+  private int job_position;
   private boolean activity;
   private BigDecimal salary;
   private String type;

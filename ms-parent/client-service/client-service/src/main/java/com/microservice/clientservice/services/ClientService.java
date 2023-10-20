@@ -9,7 +9,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class ClientService {
 
-  @Autowired private ClientRepository clientRepository;
+  @Autowired
+  private ClientRepository clientRepository;
 
   public Client addClient(Client client) {
     return clientRepository.save(client);

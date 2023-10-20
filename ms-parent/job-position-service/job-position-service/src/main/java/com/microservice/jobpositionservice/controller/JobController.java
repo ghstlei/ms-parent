@@ -16,7 +16,7 @@ public class JobController {
 
   // add new job
   @PostMapping("/addJobPosition")
-  public JobPosition addClient(@RequestBody JobPosition jobPosition) {
+  public JobPosition addJob(@RequestBody JobPosition jobPosition) {
     return jobService.addJob(jobPosition);
   }
 
