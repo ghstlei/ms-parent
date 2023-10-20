@@ -1,4 +1,5 @@
 package com.microservice.employeeleaveservice.model;
+
 import jakarta.persistence.*;
 import java.util.Date;
 import lombok.*;
@@ -12,15 +13,12 @@ public class EmployeeLeave {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private int id;
-  private String client_id;
+
+  private int client_id;
   private int employee_id;
   private String leave_type;
   private Date leave_date;
   private int number_days;
   private Date return_date;
-
-  // calcular data de retorno
-
-
-
+  private String type;
 }
